@@ -1,6 +1,6 @@
 //Basic collision detection checking for two differently named objects
-function OnCollisionEnter(girl : Collision){
- if(girl.gameObject.name == "char1"){
-  Application.LoadLevel (0);
+function OnCollisionEnter(theCollision : Collision){
+ if(theCollision.gameObject.name == "Char1"){
+  Debug.Log("Hit the floor");
  }
 }
