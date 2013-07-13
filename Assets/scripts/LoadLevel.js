@@ -1,10 +1,14 @@
+var LowCam : Camera;
+var HighCam : Camera;
+
 function OnGUI () {
 
-	// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-	if (GUI.Button (Rect (300,200,156,56), "Begin")) {
-		Application.LoadLevel (1);
-	}
-	if (GUI.Button (Rect (300,144,156,56), "Quit")) {
-		Application.Quit();
-	}
+     	if (GUI.Button (Rect (300,200,48,24), "LowCam")) {
+          LowCam.enabled = true;
+          HighCam.enabled = false;
+     }
+		if (GUI.Button (Rect (300,88,48,24), "Begin")) {
+          LowCam.enabled = false;
+          HighCam.enabled = true;
+     }
 }
